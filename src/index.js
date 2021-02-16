@@ -1,5 +1,5 @@
 module.exports = function toReadable(number) {
-    let x =  ['','one','two','three ','four ', 'five ','six ','seven ','eight ','nine ','ten ','eleven ','twelve ','thirteen ','fourteen ','fifteen ','sixteen ','seventeen ','eighteen ','nineteen '];
+    let x =  ['','one','two','three','four', 'five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];
     let y = ['', '', 'twenty','thirty','forty','fifty', 'sixty','seventy','eighty','ninety'];
     
     let newNum = number.toString();
@@ -12,9 +12,9 @@ module.exports = function toReadable(number) {
     
     if(newNum.length === 3) {
       if(newNum[1] === '0' && newNum[2] === '0'){
-        return x[newNum[0]] + 'hundred'
+        return x[newNum[0]] + ' ' + 'hundred'
       } else {
-        return x[newNum[0]] + 'hundred ' + toReadable(+(newNum[1] + newNum[2]))
+        return x[newNum[0]] + ' ' + 'hundred ' + toReadable(+(newNum[1] + newNum[2]))
       }
     }
     
