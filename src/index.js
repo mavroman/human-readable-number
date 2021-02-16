@@ -8,8 +8,14 @@ module.exports = function toReadable(number) {
     
     if(number < 20) return x[number];
     
-    if(newNum.length === 2) return y[newNum[0]] + ' ' + x[newNum[1]];
-    
+    if(newNum.length === 2) {
+      if(newNum[1] === '0') {
+        return y[newNum[0]]
+      } else {
+      return y[newNum[0]] + ' ' + x[newNum[1]];
+     }
+    }
+  
     if(newNum.length === 3) {
       if(newNum[1] === '0' && newNum[2] === '0'){
         return x[newNum[0]] + ' ' + 'hundred'
